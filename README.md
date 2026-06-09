@@ -25,16 +25,16 @@ When forecasting monthly airline passengers, the data clearly shows an upward tr
 
 ---
 
-## 📊 Results
+## 📊 Side-by-Side Results
 
-The **SARIMAX** model proved to be highly accurate for this dataset, successfully capturing the seasonality that ARIMA missed. 
+The **SARIMAX** model proved to be highly accurate for this dataset, successfully capturing the seasonality that the baseline **ARIMA** model missed. 
 
-![SARIMAX Forecast vs Actual](image_4f5222.png)  
+| 📉 ARIMA Model (Baseline) | 📈 SARIMAX Model (Winner) |
+| :---: | :---: |
+| ![ARIMA Forecast](ARIMA_model_graph.png) | ![SARIMAX Forecast](SARIMAX_model_graph.png) |
+| **MAE:** 24.36 <br> **MSE:** 864.21 <br> **RMSE:** 29.40 | **MAE:** 11.97 <br> **MSE:** 276.14 <br> **RMSE:** 16.62 |
 
-**SARIMAX Error Metrics:**
-* **Mean Absolute Error (MAE):** `11.97`
-* **Mean Squared Error (MSE):** `276.14`
-* **Root Mean Squared Error (RMSE):** `16.62`
+> **Note:** The SARIMAX model heavily outperforms ARIMA because it incorporates seasonal differencing, allowing it to accurately predict the repeating summer travel spikes.
 
 ---
 
@@ -46,3 +46,25 @@ Follow these steps to run the notebook locally on your machine:
 ```bash
 git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
+
+```
+
+**2. Install dependencies:**
+Install the required Python libraries using pip:
+
+```bash
+pip install numpy pandas matplotlib statsmodels scikit-learn
+
+```
+
+**3. Launch the Notebook:**
+Start Jupyter Notebook to open and run the code:
+
+```bash
+jupyter notebook TimeSeriesForecasting.ipynb
+
+```
+
+```
+
+```
